@@ -74,6 +74,55 @@ impl str {
     fn bright_white(&self) -> String {
         format!("\u{1b}[97m{}\u{1b}[0m", self)
     }
+
+    fn on_black(&self) -> String {
+        format!("\u{1b}[40m{}\u{1b}[0m", self)
+    }
+    fn on_red(&self) -> String {
+        format!("\u{1b}[41m{}\u{1b}[0m", self)
+    }
+    fn on_green(&self) -> String {
+        format!("\u{1b}[42m{}\u{1b}[0m", self)
+    }
+    fn on_yellow(&self) -> String {
+        format!("\u{1b}[43m{}\u{1b}[0m", self)
+    }
+    fn on_blue(&self) -> String {
+        format!("\u{1b}[44m{}\u{1b}[0m", self)
+    }
+    fn on_magenta(&self) -> String {
+        format!("\u{1b}[45m{}\u{1b}[0m", self)
+    }
+    fn on_cyan(&self) -> String {
+        format!("\u{1b}[46m{}\u{1b}[0m", self)
+    }
+    fn on_white(&self) -> String {
+        format!("\u{1b}[47m{}\u{1b}[0m", self)
+    }
+    fn on_bright_black(&self) -> String {
+        format!("\u{1b}[100m{}\u{1b}[0m", self)
+    }
+    fn on_bright_red(&self) -> String {
+        format!("\u{1b}[101m{}\u{1b}[0m", self)
+    }
+    fn on_bright_green(&self) -> String {
+        format!("\u{1b}[102m{}\u{1b}[0m", self)
+    }
+    fn on_bright_yellow(&self) -> String {
+        format!("\u{1b}[103m{}\u{1b}[0m", self)
+    }
+    fn on_bright_blue(&self) -> String {
+        format!("\u{1b}[104m{}\u{1b}[0m", self)
+    }
+    fn on_bright_magenta(&self) -> String {
+        format!("\u{1b}[105m{}\u{1b}[0m", self)
+    }
+    fn on_bright_cyan(&self) -> String {
+        format!("\u{1b}[106m{}\u{1b}[0m", self)
+    }
+    fn on_bright_white(&self) -> String {
+        format!("\u{1b}[107m{}\u{1b}[0m", self)
+    }
 }
 
 #[cfg(test)]
@@ -107,5 +156,24 @@ mod tests {
         println!("{}", "bright_magenta".bright_magenta());
         println!("{}", "bright_cyan".bright_cyan());
         println!("{}", "bright_white".bright_white());
+
+        println!("{}", "on black".on_black());
+        println!("{}", "on red".on_red());
+        println!("{}", "on green".on_green());
+        println!("{}", "on yellow".on_yellow());
+        println!("{}", "on blue".on_blue());
+        println!("{}", "on magenta".on_magenta());
+        println!("{}", "on cyan".on_cyan());
+        println!("{}", "on white".on_white());
+        println!("{}", "on bright_black".on_bright_black());
+        println!("{}", "on bright_red".on_bright_red());
+        println!("{}", "on bright_green".on_bright_green());
+        println!("{}", "on bright_yellow".on_bright_yellow());
+        println!("{}", "on bright_blue".on_bright_blue());
+        println!("{}", "on bright_magenta".on_bright_magenta());
+        println!("{}", "on bright_cyan".on_bright_cyan());
+        println!("{}", "on bright_white".on_bright_white());
+
+        println!("{}", "italic yellow on blue".italic().yellow().on_blue());
     }
 }
