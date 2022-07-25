@@ -6,6 +6,7 @@ TinyAnsi is a dead simple library that allows basic coloring of terminal charact
 
 There are many crates for the ansi terminal that have been created and abandoned, but none of them solve the following problem.
 If that is the case, I do not need complex functionality, so I built the library on a scale such that the code can be read at a glance.
+
 https://github.com/jam1garner/owo-colors/issues/45
 
 ## How to use
