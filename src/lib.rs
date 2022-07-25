@@ -1,11 +1,11 @@
-//! # SimpleAnsi
+//! # TinyAnsi
 //!
-//! SimpleAnsi is a dead simple library that allows basic coloring of terminal characters.
+//! TinyAnsi is a dead simple library that allows basic coloring of terminal characters.
 //!
 //! ## Usage
 //!
 //! ```rust
-//! use simple_ansi::SimpleAnsi;
+//! use tiny_ansi::TinyAnsi;
 //! println!("{}", "red".red());
 //! println!(
 //!     "{}",
@@ -13,7 +13,7 @@
 //! );
 //! ```
 
-pub trait SimpleAnsi {
+pub trait TinyAnsi {
     fn bold(&self) -> String;
     fn dimmed(&self) -> String;
     fn italic(&self) -> String;
@@ -58,7 +58,7 @@ pub trait SimpleAnsi {
     fn on_bright_white(&self) -> String;
 }
 
-impl SimpleAnsi for str {
+impl TinyAnsi for str {
     fn bold(&self) -> String {
         format!("\u{1b}[1m{}\u{1b}[0m", self)
     }
@@ -185,7 +185,7 @@ impl SimpleAnsi for str {
 
 #[cfg(test)]
 mod tests {
-    use crate::SimpleAnsi;
+    use crate::TinyAnsi;
 
     #[test]
     fn test_show() {
