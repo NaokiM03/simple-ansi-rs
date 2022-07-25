@@ -1,6 +1,31 @@
 use ext_trait::extension;
 #[extension(trait SimpleAnsi)]
 impl str {
+    fn bold(&self) -> String {
+        format!("\u{1b}[1m{}\u{1b}[0m", self)
+    }
+    fn dimmed(&self) -> String {
+        format!("\u{1b}[2m{}\u{1b}[0m", self)
+    }
+    fn italic(&self) -> String {
+        format!("\u{1b}[3m{}\u{1b}[0m", self)
+    }
+    fn underline(&self) -> String {
+        format!("\u{1b}[4m{}\u{1b}[0m", self)
+    }
+    fn blink(&self) -> String {
+        format!("\u{1b}[5m{}\u{1b}[0m", self)
+    }
+    fn reverse(&self) -> String {
+        format!("\u{1b}[7m{}\u{1b}[0m", self)
+    }
+    fn hidden(&self) -> String {
+        format!("\u{1b}[8m{}\u{1b}[0m", self)
+    }
+    fn strikethrough(&self) -> String {
+        format!("\u{1b}[9m{}\u{1b}[0m", self)
+    }
+
     fn black(&self) -> String {
         format!("\u{1b}[30m{}\u{1b}[0m", self)
     }
@@ -57,6 +82,15 @@ mod tests {
 
     #[test]
     fn test_show() {
+        println!("{}", "bold".bold());
+        println!("{}", "dimmed".dimmed());
+        println!("{}", "italic".italic());
+        println!("{}", "underline".underline());
+        println!("{}", "blink".blink());
+        println!("{}", "reverse".reverse());
+        println!("{}", "hidden".hidden());
+        println!("{}", "strikethrough".strikethrough());
+
         println!("{}", "black".black());
         println!("{}", "red".red());
         println!("{}", "green".green());
