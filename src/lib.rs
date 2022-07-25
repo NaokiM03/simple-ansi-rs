@@ -5,7 +5,7 @@
 //! ## Usage
 //! 
 //! ```rust
-//! use simple_andi::SimpleAnsi;
+//! use simple_ansi::SimpleAnsi;
 //! println!("{}", "red".red());
 //! println!(
 //!     "{}",
