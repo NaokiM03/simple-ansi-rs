@@ -1,9 +1,9 @@
 //! # SimpleAnsi
 //!
-//! SimpleAnsi is a fucking simple library that allows basic coloring of terminal characters.
-//! 
+//! SimpleAnsi is a dead simple library that allows basic coloring of terminal characters.
+//!
 //! ## Usage
-//! 
+//!
 //! ```rust
 //! use simple_ansi::SimpleAnsi;
 //! println!("{}", "red".red());
