@@ -175,5 +175,7 @@ mod tests {
         println!("{}", "on bright_white".on_bright_white());
 
         println!("{}", "italic yellow on blue".italic().yellow().on_blue());
+        println!("{}", "bold italic red on green".bold().italic().red().on_green());
+        println!("{}", "underline blink magenta on red".underline().blink().magenta().on_red());
     }
 }
