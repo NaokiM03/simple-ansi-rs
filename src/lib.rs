@@ -1,6 +1,49 @@
-use ext_trait::extension;
-#[extension(trait SimpleAnsi)]
-impl str {
+pub trait SimpleAnsi {
+    fn bold(&self) -> String;
+    fn dimmed(&self) -> String;
+    fn italic(&self) -> String;
+    fn underline(&self) -> String;
+    fn blink(&self) -> String;
+    fn reverse(&self) -> String;
+    fn hidden(&self) -> String;
+    fn strikethrough(&self) -> String;
+
+    fn black(&self) -> String;
+    fn red(&self) -> String;
+    fn green(&self) -> String;
+    fn yellow(&self) -> String;
+    fn blue(&self) -> String;
+    fn magenta(&self) -> String;
+    fn cyan(&self) -> String;
+    fn white(&self) -> String;
+    fn bright_black(&self) -> String;
+    fn bright_red(&self) -> String;
+    fn bright_green(&self) -> String;
+    fn bright_yellow(&self) -> String;
+    fn bright_blue(&self) -> String;
+    fn bright_magenta(&self) -> String;
+    fn bright_cyan(&self) -> String;
+    fn bright_white(&self) -> String;
+
+    fn on_black(&self) -> String;
+    fn on_red(&self) -> String;
+    fn on_green(&self) -> String;
+    fn on_yellow(&self) -> String;
+    fn on_blue(&self) -> String;
+    fn on_magenta(&self) -> String;
+    fn on_cyan(&self) -> String;
+    fn on_white(&self) -> String;
+    fn on_bright_black(&self) -> String;
+    fn on_bright_red(&self) -> String;
+    fn on_bright_green(&self) -> String;
+    fn on_bright_yellow(&self) -> String;
+    fn on_bright_blue(&self) -> String;
+    fn on_bright_magenta(&self) -> String;
+    fn on_bright_cyan(&self) -> String;
+    fn on_bright_white(&self) -> String;
+}
+
+impl SimpleAnsi for str {
     fn bold(&self) -> String {
         format!("\u{1b}[1m{}\u{1b}[0m", self)
     }
