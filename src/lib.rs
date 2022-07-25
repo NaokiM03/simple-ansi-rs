@@ -1,23 +1,6 @@
-pub trait SimpleAnsi {
-    fn black(&self) -> String;
-    fn red(&self) -> String;
-    fn green(&self) -> String;
-    fn yellow(&self) -> String;
-    fn blue(&self) -> String;
-    fn magenta(&self) -> String;
-    fn cyan(&self) -> String;
-    fn white(&self) -> String;
-    fn bright_black(&self) -> String;
-    fn bright_red(&self) -> String;
-    fn bright_green(&self) -> String;
-    fn bright_yellow(&self) -> String;
-    fn bright_blue(&self) -> String;
-    fn bright_magenta(&self) -> String;
-    fn bright_cyan(&self) -> String;
-    fn bright_white(&self) -> String;
-}
-
-impl SimpleAnsi for str {
+use ext_trait::extension;
+#[extension(trait SimpleAnsi)]
+impl str {
     fn black(&self) -> String {
         format!("\u{1b}[30m{}\u{1b}[0m", self)
     }
