@@ -1,8 +1,13 @@
 [package]
-name = "simple-ansi-rs"
+name = "simple-ansi"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["NaokiM03"]
+description = "SimpleAnsi is a fucking simple library that allows basic coloring of terminal characters."
+keywords = ["ansi_term", "color", "terminal"]
+documentation = "https://docs.rs/simple-ansi"
+repository = "https://github.com/NaokiM03/simple-ansi-rs"
+readme = "README.md"
+license = "MIT"
 
 [dependencies]
