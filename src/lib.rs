@@ -1,3 +1,18 @@
+//! # SimpleAnsi
+//!
+//! SimpleAnsi is a fucking simple library that allows basic coloring of terminal characters.
+//! 
+//! ## Usage
+//! 
+//! ```rust
+//! use simple_andi::SimpleAnsi;
+//! println!("{}", "red".red());
+//! println!(
+//!     "{}",
+//!     "bold italic red on green".bold().italic().red().on_green()
+//! );
+//! ```
+
 pub trait SimpleAnsi {
     fn bold(&self) -> String;
     fn dimmed(&self) -> String;
